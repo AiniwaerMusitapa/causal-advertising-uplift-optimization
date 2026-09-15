@@ -1,0 +1,119 @@
+{
+  "status": "complete",
+  "completed_at_utc": "2026-09-05T07:58:10.868453+00:00",
+  "dataset": {
+    "path": "C:\\Users\\User\\Desktop\\简历resume\\Criteo_Causal\\data\\processed\\criteo_uplift_v2_1.parquet",
+    "bytes": 200379628,
+    "sha256": "0affa3cee1dc52d22a4f75b18d95fc9876588a569f5e7ba5f9bda7ae0797927d"
+  },
+  "source": {
+    "path": "C:\\Users\\User\\Desktop\\简历resume\\Criteo_Causal\\data\\raw\\criteo-research-uplift-v2.1.csv.gz",
+    "bytes": 311422618,
+    "sha256": "2716e1bf0fd157a93b5bf86924d9088419dfbac2022c6cd90030220634f616dc"
+  },
+  "rows": 13979592,
+  "split_rule": "hash(row_id,42)%100: train 0-69, validation 70-84, test 85-99",
+  "full_split_counts": {
+    "test": 2096507,
+    "train": 9788408,
+    "validation": 2094677
+  },
+  "model_sample_rule": "hash(row_id,2026)%7=0",
+  "model_rows": {
+    "train": 1397678,
+    "validation": 299325,
+    "test": 299251
+  },
+  "features": [
+    "f0",
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5",
+    "f6",
+    "f7",
+    "f8",
+    "f9",
+    "f10",
+    "f11"
+  ],
+  "excluded_post_treatment": [
+    "exposure"
+  ],
+  "random_seed": 42,
+  "selected_model": "s_learner",
+  "selection_metric": "validation Qini coefficient",
+  "model_artifacts": {
+    "s_learner": {
+      "path": "C:\\Users\\User\\Desktop\\简历resume\\Criteo_Causal\\models\\s_learner.joblib",
+      "sha256": "530682030ac09ecbf4883d56ab462804cd70adc6cff7c83b596c592fdb651bc8",
+      "bytes": 359830
+    },
+    "t_mu0": {
+      "path": "C:\\Users\\User\\Desktop\\简历resume\\Criteo_Causal\\models\\t_mu0.joblib",
+      "sha256": "2e30bc2a58602321d75607231a00d5def1aa9a9676a6310b12cc426633b5e3ca",
+      "bytes": 352806
+    },
+    "t_mu1": {
+      "path": "C:\\Users\\User\\Desktop\\简历resume\\Criteo_Causal\\models\\t_mu1.joblib",
+      "sha256": "1041b9e4f1474b08888d06dd7e50400e023ef8646274647248391cb452d16ec6",
+      "bytes": 358742
+    },
+    "x_tau0": {
+      "path": "C:\\Users\\User\\Desktop\\简历resume\\Criteo_Causal\\models\\x_tau0.joblib",
+      "sha256": "f0a5c6371736dc545109a26cbac454a50715d6ff33ccfc56674546dac584d108",
+      "bytes": 305459
+    },
+    "x_tau1": {
+      "path": "C:\\Users\\User\\Desktop\\简历resume\\Criteo_Causal\\models\\x_tau1.joblib",
+      "sha256": "86ba37fcb601a72445277bafd5fcb096848db80f62fa56c0f2582cfaebd2a15a",
+      "bytes": 308645
+    },
+    "causal_forest": {
+      "path": "C:\\Users\\User\\Desktop\\简历resume\\Criteo_Causal\\models\\causal_forest.joblib",
+      "sha256": "5f6307df2417bcdf88fa0ceb117767e2083510e17a5458f39fc4383644274528",
+      "bytes": 9326286
+    },
+    "causal_forest_scaler": {
+      "path": "C:\\Users\\User\\Desktop\\简历resume\\Criteo_Causal\\models\\causal_forest_scaler.joblib",
+      "sha256": "c8134e0befc69c1ecfcd6f7f7c7981338cea21a1821e166a3e921152e3e0503b",
+      "bytes": 903
+    },
+    "response_model": {
+      "path": "C:\\Users\\User\\Desktop\\简历resume\\Criteo_Causal\\models\\response_model.joblib",
+      "sha256": "c0f69b3269bc77147f4e2211bf7c14d7734ea37221154a8ffa80d233e0badc27",
+      "bytes": 359078
+    }
+  },
+  "reports": [
+    "reports\\ate_analysis.json",
+    "reports\\ate_analysis.md",
+    "reports\\data_source.json",
+    "reports\\experiment_validation.json",
+    "reports\\experiment_validation.md",
+    "reports\\powerbi\\model_summary.csv",
+    "reports\\powerbi\\targeting_policy.csv",
+    "reports\\powerbi\\uplift_deciles.csv",
+    "reports\\uplift_evaluation.md",
+    "reports\\uplift_metrics.json"
+  ],
+  "figures": [
+    "figures\\ate_confidence_interval.png",
+    "figures\\covariate_balance.png",
+    "figures\\model_comparison.png",
+    "figures\\outcome_comparison.png",
+    "figures\\qini_curve.png",
+    "figures\\targeting_policy.png",
+    "figures\\uplift_by_decile.png",
+    "figures\\uplift_curve.png"
+  ],
+  "artifact_audit": "reports/artifact_audit.json",
+  "targeting_policy": "reports/targeting_policy.md",
+  "source_code_sha256": {
+    "00_download_data.py": "d0578d311a3eaf7cd412e9a3bf571f914e1968ea651e4b3a0035c9005b1c323b",
+    "01_prepare_and_audit.py": "c1e5d8375ade5777f90866803664af291227558bb662c3545f7ceee6c32f4b3d",
+    "02_train_and_evaluate.py": "763d602c2abf7651f285f38aa0d476b4e1ff23341fe8ec575e785a50b0e87d27",
+    "03_finalize_and_verify.py": "5ed6445f24320b39748f1e93b22ace4dd74444d54cbdd3b4567cce3f649e2e2f"
+  }
+}

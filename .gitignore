@@ -1,0 +1,11 @@
+/.venv/
+/data/raw/
+/data/processed/
+/data/features/
+/models/*.joblib
+/models/*.txt
+/models/*.pkl
+/logs/
+*.tmp
+__pycache__/
+*.pyc

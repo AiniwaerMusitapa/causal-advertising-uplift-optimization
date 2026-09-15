@@ -1,0 +1,13 @@
+{
+  "status": "verified",
+  "downloaded_at_utc": "2026-09-05T07:50:25.142788+00:00",
+  "source": "Criteo official organization mirror on Hugging Face",
+  "dataset": "Criteo Uplift Prediction Dataset, corrected unbiased v2.1",
+  "url": "https://huggingface.co/datasets/criteo/criteo-uplift/resolve/main/criteo-research-uplift-v2.1.csv.gz",
+  "official_page": "https://ailab.criteo.com/criteo-uplift-prediction-dataset/",
+  "archive": "C:\\Users\\User\\Desktop\\\u7b80\u5386resume\\Criteo_Causal\\data\\raw\\criteo-research-uplift-v2.1.csv.gz",
+  "bytes": 311422618,
+  "sha256": "2716e1bf0fd157a93b5bf86924d9088419dfbac2022c6cd90030220634f616dc",
+  "license_on_mirror": "CC BY-NC-SA 4.0",
+  "version_note": "Corrected v2.1 is used because Criteo reports leakage in the older approximately 25M-row release."
+}

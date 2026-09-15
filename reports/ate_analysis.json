@@ -1,0 +1,44 @@
+{
+  "status": "complete",
+  "estimand": "intention-to-treat difference in means",
+  "rows": 13979592,
+  "bootstrap": "2,000 stratified nonparametric binary-outcome resamples; seed 42",
+  "outcomes": {
+    "visit": {
+      "treatment_mean": 0.048543360048743316,
+      "control_mean": 0.03820095691954503,
+      "ate": 0.010342403129198284,
+      "absolute_lift": 0.010342403129198284,
+      "relative_lift": 0.27073675539019615,
+      "standard_error": 0.00014631642098864926,
+      "ci95_normal": [
+        0.010055622944060531,
+        0.010629183314336037
+      ],
+      "z_statistic": 70.68518392751429,
+      "p_value_two_sided": 0.0,
+      "ci95_bootstrap_percentile": [
+        0.010060163777446389,
+        0.010622779770390748
+      ]
+    },
+    "conversion": {
+      "treatment_mean": 0.0030894610674129645,
+      "control_mean": 0.0019375880152813366,
+      "ate": 0.0011518730521316279,
+      "absolute_lift": 0.0011518730521316279,
+      "relative_lift": 0.594488117725262,
+      "standard_error": 3.437168357507502e-05,
+      "ci95_normal": [
+        0.0010845045523244809,
+        0.0012192415519387749
+      ],
+      "z_statistic": 33.51226743420042,
+      "p_value_two_sided": 3.194105972880377e-246,
+      "ci95_bootstrap_percentile": [
+        0.001083396454219061,
+        0.0012215264528168943
+      ]
+    }
+  }
+}
