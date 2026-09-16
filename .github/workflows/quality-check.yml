@@ -15,3 +15,5 @@ jobs:
           python-version: '3.11'
       - name: Check snapshot (no training or download)
         run: python -m unittest discover -s tests -v
+      - name: Display recorded result summary
+        run: python scripts/05_snapshot_summary.py

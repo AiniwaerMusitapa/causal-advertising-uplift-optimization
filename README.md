@@ -64,6 +64,8 @@ Browse [all eight result charts](figures/) and the [complete model comparison](r
 
 For a concise explanation of the project, read the [interview guide](docs/interview-guide.md), including metric interpretation, method choices, and claims to avoid.
 
+For calculation details, read the [methodology guide](docs/methodology.md): split rules, metric formulas, rounding conventions, and the distinction between ATE and decile bootstrap intervals.
+
 ## Verified scope
 
 - Official Criteo organization mirror archive: 311,422,618 bytes; SHA256 `2716e1bf0fd157a93b5bf86924d9088419dfbac2022c6cd90030220634f616dc`.
@@ -112,10 +114,13 @@ python3 -m venv .venv
 ### Lightweight checks (no data download or ML dependencies)
 
 ```bash
+python scripts/05_snapshot_summary.py
 python -m unittest discover -s tests -v
 ```
 
-These checks validate the committed report snapshot, source checksums, figure headers, and local README links. They **do not** rerun training or independently establish causal validity. GitHub Actions runs the same checks on pushes and pull requests.
+The summary command displays the recorded estimates, run date and limitations. Add `--json` for machine-readable output. It reads saved reports; it does not run a new experiment.
+
+The checks validate curve arithmetic, Qini/AUUC integration, population and decile reconciliation, Power BI model-summary consistency, source checksums, figure headers, and local README links. They **do not** rerun training or independently establish causal validity. GitHub Actions runs the same checks on pushes and pull requests.
 
 ### Refresh the portfolio figures
 

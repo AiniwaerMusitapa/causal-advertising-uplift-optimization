@@ -27,7 +27,7 @@ The treated arm is much larger than control. T-learner has fewer control example
 
 ## Stability and uncertainty
 
-Each test uplift decile includes a 95% stratified binary bootstrap interval (300 replicates). Full decile results, pairwise Spearman correlations, top-10% Jaccard overlap, and segment sizes are in `uplift_metrics.json`.
+Each test uplift decile includes a 95% multinomial bootstrap interval over its empirical transformed-outcome values (300 replicates), with the evaluation-partition propensity held fixed. This is not an arm-stratified bootstrap and does not establish significance of the difference between targeting policies. Full decile results, pairwise Spearman correlations, top-10% Jaccard overlap, and segment sizes are in `uplift_metrics.json`. See [methodology](../docs/methodology.md) for the distinction from the full-sample ATE bootstrap.
 
 ## Limitations
 
