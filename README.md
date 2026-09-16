@@ -62,6 +62,8 @@ Baseline feature balance is checked before causal modeling. Balance and treatmen
 
 Browse [all eight result charts](figures/) and the [complete model comparison](reports/uplift_evaluation.md).
 
+For a concise explanation of the project, read the [interview guide](docs/interview-guide.md), including metric interpretation, method choices, and claims to avoid.
+
 ## Verified scope
 
 - Official Criteo organization mirror archive: 311,422,618 bytes; SHA256 `2716e1bf0fd157a93b5bf86924d9088419dfbac2022c6cd90030220634f616dc`.
@@ -114,6 +116,10 @@ python -m unittest discover -s tests -v
 ```
 
 These checks validate the committed report snapshot, source checksums, figure headers, and local README links. They **do not** rerun training or independently establish causal validity. GitHub Actions runs the same checks on pushes and pull requests.
+
+### Refresh the portfolio figures
+
+After installing the pinned dependencies, run `python scripts/04_render_portfolio.py` to refresh the three charts embedded above from the committed JSON reports, without downloading data or retraining models. These figures use the same recorded estimates; original pipeline charts for the other five views remain unchanged.
 
 ## Reports and figures
 
