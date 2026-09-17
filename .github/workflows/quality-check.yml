@@ -17,3 +17,5 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Display recorded result summary
         run: python scripts/05_snapshot_summary.py
+      - name: Verify preflight command is available
+        run: python scripts/06_preflight.py --help
